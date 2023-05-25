@@ -14,7 +14,7 @@ def index():
 def create_entry():
     form = EntryForm()
     errors = None
-    if request.method == "GET":
+    if request.method == "POST":
         if form.validate_on_submit():
             entry = Entry(
                 title=form.title.data,
